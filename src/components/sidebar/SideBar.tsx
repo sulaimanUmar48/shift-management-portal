@@ -3,7 +3,7 @@ import { MdAccessTime, MdAlarm, MdAttachMoney, MdDashboard, MdGroups } from "rea
 
 const SideBar = () => {
   return (
-    <div className="bg-primary-comp  max-sm:w-10.5 h-full border-[#cecece53] border overflow-hidden">
+    <div className="bg-primary-comp min-w-40 max-sm:min-w-10.5 max-sm:w-10.5 h-full border-[#cecece53] border overflow-hidden">
 
         {/* COMPANY LOGO */}
         <div className="flex-center font-semibold bg-green-50 h-25 max-sm:opacity-0">

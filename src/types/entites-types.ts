@@ -45,3 +45,11 @@ export type Absence = {
     date: string
     reason: null | string
 }
+
+
+export type Notification = {
+    id: string
+    title: string
+    content: string
+    timestamp: string
+}

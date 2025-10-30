@@ -8,7 +8,9 @@
   /* THEME COLORS */                  /*comp = complement*/
   --color-primary: #F8F9FA;
   --color-primary-comp: #F5F5F5;   
-  --color-comp-one: #000;
+  --color-primary-comp-two: #FFF;
+  --color-secondary: #000;
+  --color-accent-one: #0E6B37;
 
   /* BORDER COLOR */
 
