@@ -38,14 +38,14 @@ const Header = () => {
                 <div>
                     {/* User Name */}
                     <p 
-                    className="text-sm font-semibold max-sm:text-[10px]"
+                    className="text-xs font-semibold max-sm:text-[10px]"
                     >
                         Umar-Balogun Sulaiman
                     </p>
                     
                     {/* User Role */}
                     <p
-                    className="text-[11px] max-sm:text-[8px]"
+                    className="text-[10px] max-sm:text-[8px]"
                     >
                         Admin
                     </p>

@@ -1,0 +1,562 @@
+[
+  {
+    "id": "76848302-4b3b-4f43-9e45-f1013f3381da",
+    "duration": 7,
+    "start_time": "7:30 AM",
+    "end_time": "2:30 PM",
+    "location": "Private Booth",
+    "currently_assigned_to": [],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "89941063-c8e9-4d0d-ba15-4f9270f5707c",
+    "duration": 4,
+    "start_time": "10:30 AM",
+    "end_time": "2:30 PM",
+    "location": "Main Bar",
+    "currently_assigned_to": [
+      "5565db63-1bb8-45cd-a869-cf03eda864e3"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "9c5bb1a0-9311-46d5-a014-cbf27e64db2a",
+    "duration": 6,
+    "start_time": "2:45 PM",
+    "end_time": "8:45 PM",
+    "location": "Private Booth",
+    "currently_assigned_to": [
+      "70ed2c64-b63f-449a-9b1e-78ef355fa860",
+      "f243384d-4aad-423c-b6c3-85867ad29219",
+      "052e952b-5754-463a-8c87-742f79c566a7"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "091ca933-04eb-4929-b0dc-024efc35946a",
+    "duration": 5,
+    "start_time": "1:00 PM",
+    "end_time": "6:00 PM",
+    "location": "Main Bar",
+    "currently_assigned_to": [],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "b1486349-49d4-45ea-bfd2-8edc893fcf8b",
+    "duration": 5,
+    "start_time": "7:15 AM",
+    "end_time": "12:15 PM",
+    "location": "Cocktail Section",
+    "currently_assigned_to": [
+      "44db8018-8349-4d77-98ff-62f4ea36b136",
+      "10058b80-66af-426d-91da-ad0b19685c1a"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "3e636a93-2c01-4363-a10e-dbc9e4ff42f5",
+    "duration": 5,
+    "start_time": "9:15 AM",
+    "end_time": "2:15 PM",
+    "location": "Balcony",
+    "currently_assigned_to": [
+      "25936d85-7a5e-4a81-abff-f497123ff260"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "134e1bfa-8bce-43af-a37e-334306f7a739",
+    "duration": 7,
+    "start_time": "7:15 AM",
+    "end_time": "2:15 PM",
+    "location": "Rooftop",
+    "currently_assigned_to": [
+      "0ed57fbe-2d1d-402f-b80e-4de52f448b2e",
+      "8beebf00-409e-43a7-a83b-8c0148abd716"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "14282f40-db82-4b67-8a6b-ac0e3dc216aa",
+    "duration": 8,
+    "start_time": "9:30 AM",
+    "end_time": "5:30 PM",
+    "location": "Private Booth",
+    "currently_assigned_to": [
+      "80473a3f-0a2a-405d-b90f-626dbc6c67b9",
+      "aabb2f5b-7b4c-4e98-93ea-d6a4aee02837"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "ef8894cc-a606-41f2-b932-4487de4ff3fd",
+    "duration": 4,
+    "start_time": "3:30 PM",
+    "end_time": "7:30 PM",
+    "location": "Main Bar",
+    "currently_assigned_to": [
+      "d1d51f12-6993-44da-80bf-9bc7ff56715f",
+      "48dc495b-8f23-4855-b1b0-fb4e75a941e1",
+      "3377846a-6c61-4615-8c22-1064d77ba774"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "d3771cbb-3f6b-435f-885a-7b9b4ec2cd0b",
+    "duration": 2,
+    "start_time": "7:15 PM",
+    "end_time": "9:15 PM",
+    "location": "Dance Floor",
+    "currently_assigned_to": [
+      "3f574448-4d91-4587-903d-0402bbc6cd51"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "25e66521-555b-48e8-9ad0-dbf3d999093f",
+    "duration": 1,
+    "start_time": "8:45 PM",
+    "end_time": "9:45 PM",
+    "location": "Outdoor Area",
+    "currently_assigned_to": [
+      "1fe1e282-bb29-4329-950b-940d2a794ca2",
+      "45dfb1fc-9aae-48dc-a0f2-2e992cfcb51f"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "cec1718f-647e-4c17-8ebb-46df93baac90",
+    "duration": 6,
+    "start_time": "2:45 PM",
+    "end_time": "8:45 PM",
+    "location": "Entrance",
+    "currently_assigned_to": [],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "94d22cb0-05e4-47a9-be5e-feb4a6b3737f",
+    "duration": 4,
+    "start_time": "5:00 PM",
+    "end_time": "9:00 PM",
+    "location": "Main Bar",
+    "currently_assigned_to": [
+      "a971de83-5f87-4cbd-a31a-a320ab1bbb84"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "7994076b-cd2c-481f-ac06-7faa0687c6a8",
+    "duration": 5,
+    "start_time": "1:00 PM",
+    "end_time": "6:00 PM",
+    "location": "Outdoor Area",
+    "currently_assigned_to": [
+      "673bce35-2d81-4519-aecc-9b5d1a647ab5",
+      "71de7fac-d9fa-434b-b2d5-ca270c884d0c",
+      "50910f39-8e8b-4cbc-bbe0-331d3c5be050"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "5339301c-863a-4948-b4b4-26f5eb281967",
+    "duration": 5,
+    "start_time": "4:00 PM",
+    "end_time": "9:00 PM",
+    "location": "VIP Lounge",
+    "currently_assigned_to": [
+      "4a964866-01a6-4565-ae3a-7694c772efea",
+      "d8f4c1ee-a7fc-44d3-8a2b-4a536e2ddbd4"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "72a415c2-da6c-494b-b89a-7eb1cc9446c1",
+    "duration": 4,
+    "start_time": "10:45 AM",
+    "end_time": "2:45 PM",
+    "location": "Rooftop",
+    "currently_assigned_to": [
+      "2dc42d06-fe75-466c-8b19-842283427fe8",
+      "4e4344bc-da8d-49bf-aba7-7eacd0f4852b"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "c32f986a-5ce4-4913-b605-96d5829afdb0",
+    "duration": 1,
+    "start_time": "8:15 PM",
+    "end_time": "9:15 PM",
+    "location": "Outdoor Area",
+    "currently_assigned_to": [],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "1a836d9c-4a5b-4df8-94e7-2c3ecfc9d889",
+    "duration": 7,
+    "start_time": "9:30 AM",
+    "end_time": "4:30 PM",
+    "location": "Dance Floor",
+    "currently_assigned_to": [
+      "85299c5f-a5d8-4c5f-b518-abe4cc83e735",
+      "e2d274e1-9e33-4601-9f3f-220e61c30335"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "0c6eecaf-9179-47d5-8f25-94399b7711fd",
+    "duration": 1,
+    "start_time": "8:45 PM",
+    "end_time": "9:45 PM",
+    "location": "Backroom",
+    "currently_assigned_to": [
+      "b339f3ab-4aa5-44c7-81d9-24a9c179fb7b",
+      "bc8efb0b-4a06-4ac4-adf0-e10859715d14"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "98506745-fe92-42bc-941e-1c71a7458a67",
+    "duration": 5,
+    "start_time": "9:45 AM",
+    "end_time": "2:45 PM",
+    "location": "Outdoor Area",
+    "currently_assigned_to": [
+      "ce476ccf-7705-4611-b64a-b0b7dddf2226",
+      "55ba5a29-1643-4e6c-98c2-05e9b76bf86a",
+      "c6092cbf-a38a-473d-8d8e-077d8517d498"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "60441113-e87a-4dd6-ba94-81042c8effe4",
+    "duration": 6,
+    "start_time": "3:30 PM",
+    "end_time": "9:30 PM",
+    "location": "Rooftop",
+    "currently_assigned_to": [],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "4d20c71c-3564-4ce4-bfb5-3b2fa5356a8b",
+    "duration": 4,
+    "start_time": "7:30 AM",
+    "end_time": "11:30 AM",
+    "location": "VIP Lounge",
+    "currently_assigned_to": [
+      "c435741c-dfee-4228-9025-dfd1357ddce6"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "1f0cbfcb-655b-47f3-bf9b-b38702016f0d",
+    "duration": 7,
+    "start_time": "2:45 PM",
+    "end_time": "9:45 PM",
+    "location": "Private Booth",
+    "currently_assigned_to": [
+      "214582c7-8a27-4a52-9c66-efc61e0938c6"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "9d6c2140-8aed-46eb-a97e-deef4c417548",
+    "duration": 4,
+    "start_time": "7:15 AM",
+    "end_time": "11:15 AM",
+    "location": "Rooftop",
+    "currently_assigned_to": [
+      "19fc22ac-3cde-4566-ba39-73d150295ba8"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "3bda5c85-1ada-4c91-abeb-b94e48ed9ec8",
+    "duration": 5,
+    "start_time": "2:45 PM",
+    "end_time": "7:45 PM",
+    "location": "Outdoor Area",
+    "currently_assigned_to": [],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "bc0cff49-96d4-4d84-8cf5-d04bab376f02",
+    "duration": 7,
+    "start_time": "10:30 AM",
+    "end_time": "5:30 PM",
+    "location": "Cocktail Section",
+    "currently_assigned_to": [],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "19e8d770-351f-40c0-980e-8bc4c640ece3",
+    "duration": 5,
+    "start_time": "1:15 PM",
+    "end_time": "6:15 PM",
+    "location": "Backroom",
+    "currently_assigned_to": [],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "4c9ee76e-1939-47c9-b775-575f8749695d",
+    "duration": 7,
+    "start_time": "10:45 AM",
+    "end_time": "5:45 PM",
+    "location": "Rooftop",
+    "currently_assigned_to": [],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "d121677d-92e3-4c5b-8fcc-44598d9f5d64",
+    "duration": 7,
+    "start_time": "2:30 PM",
+    "end_time": "9:30 PM",
+    "location": "Entrance",
+    "currently_assigned_to": [
+      "edb0c90e-50eb-49fd-b92c-4c4e70933da0",
+      "9a2c1d8a-2d70-464b-b777-e722365aa35b"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "6cce1929-a8d2-4806-967b-53218fdad3d5",
+    "duration": 5,
+    "start_time": "11:45 AM",
+    "end_time": "4:45 PM",
+    "location": "Rooftop",
+    "currently_assigned_to": [
+      "5116e3fc-a26e-4553-8732-d1f03423ec5e"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "46388d7c-1e8d-4e05-aff7-77abe579021c",
+    "duration": 7,
+    "start_time": "8:30 AM",
+    "end_time": "3:30 PM",
+    "location": "Backroom",
+    "currently_assigned_to": [],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "2ff04673-2bc3-49c3-9e17-53ba57c0e8a3",
+    "duration": 5,
+    "start_time": "11:45 AM",
+    "end_time": "4:45 PM",
+    "location": "Backroom",
+    "currently_assigned_to": [
+      "5b795c99-32c1-427c-9059-1de8e46c3b2b",
+      "4593b3c6-e675-497c-94e1-c863a6619ae8",
+      "6abedcae-ea3a-4390-8456-9911ae82be32"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "71556371-050b-4288-81ac-3059f12c82c5",
+    "duration": 4,
+    "start_time": "7:45 AM",
+    "end_time": "11:45 AM",
+    "location": "Rooftop",
+    "currently_assigned_to": [
+      "586dee81-23bf-4ce6-b3bc-1c25c835f462",
+      "b8410f0a-9caf-471f-b46f-5b69c45b07fc",
+      "962846ad-2999-45e5-8c72-672d50219899"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "949545d6-ade4-4858-a616-58649691ac9e",
+    "duration": 8,
+    "start_time": "1:00 PM",
+    "end_time": "9:00 PM",
+    "location": "Cocktail Section",
+    "currently_assigned_to": [
+      "e09c543f-d81e-4c89-8353-6d8c9595bc66"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "3983c5ae-f4c1-4641-a4e5-74cea3bd16fb",
+    "duration": 2,
+    "start_time": "7:15 PM",
+    "end_time": "9:15 PM",
+    "location": "Private Booth",
+    "currently_assigned_to": [],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "51a62fe0-9499-45f3-8caa-ebcc9a68affa",
+    "duration": 6,
+    "start_time": "10:15 AM",
+    "end_time": "4:15 PM",
+    "location": "Entrance",
+    "currently_assigned_to": [
+      "b4d7e85f-6439-4312-be87-912038775d72",
+      "570d4358-a0a9-4a31-a12b-a2cf237642fb",
+      "2d124daa-8e4f-428d-90c8-4dc3c850dd3c"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "3874e934-1d80-46f2-a964-48f977acacfc",
+    "duration": 8,
+    "start_time": "9:15 AM",
+    "end_time": "5:15 PM",
+    "location": "Outdoor Area",
+    "currently_assigned_to": [
+      "057b8117-1a78-4d42-95a7-6e858701160f",
+      "002dedf7-2e9b-4d10-9540-55ee3095e88a",
+      "c728aa4a-6a2f-448d-8c65-e4ad7c640416"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "51d73da6-6e94-49c6-9dd1-8cbdb0045f75",
+    "duration": 3,
+    "start_time": "6:45 PM",
+    "end_time": "9:45 PM",
+    "location": "Balcony",
+    "currently_assigned_to": [],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "99f99d4b-1602-4870-8f5d-f4bde5342850",
+    "duration": 5,
+    "start_time": "7:30 AM",
+    "end_time": "12:30 PM",
+    "location": "Rooftop",
+    "currently_assigned_to": [
+      "87c44396-90b9-40f3-9ca8-9e3cea58d887",
+      "3de7b148-307a-4524-abda-2b473d6873b7",
+      "a3d212f2-f2df-46ac-9d82-c1ae2097e082"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "75dafe4a-1b4b-4dd6-a9a1-db36e13bfde5",
+    "duration": 6,
+    "start_time": "1:45 PM",
+    "end_time": "7:45 PM",
+    "location": "Private Booth",
+    "currently_assigned_to": [
+      "5f770d71-b4b7-4bb3-b9f2-c224e5f7d187",
+      "b1aa9502-e03b-485e-994d-deb6b55ebcd7"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "06b97a16-633c-4038-a138-87ee7e37e35a",
+    "duration": 4,
+    "start_time": "1:45 PM",
+    "end_time": "5:45 PM",
+    "location": "VIP Lounge",
+    "currently_assigned_to": [
+      "aa6e1dfd-3247-40c6-9e83-f6b5e407f5dd",
+      "118ed51a-caab-4188-a6fb-26b3febeade1",
+      "a1a6bd57-e945-4b89-a048-416b214bbe2c"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "44683ea6-ac18-4eeb-a148-2212a14b2265",
+    "duration": 4,
+    "start_time": "12:15 PM",
+    "end_time": "4:15 PM",
+    "location": "Dance Floor",
+    "currently_assigned_to": [],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "a5205cf7-3d67-4318-be70-a378736f9a20",
+    "duration": 4,
+    "start_time": "11:30 AM",
+    "end_time": "3:30 PM",
+    "location": "Backroom",
+    "currently_assigned_to": [],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "32f76f52-d921-42dd-bdfc-57a9c9266df3",
+    "duration": 1,
+    "start_time": "8:30 PM",
+    "end_time": "9:30 PM",
+    "location": "Private Booth",
+    "currently_assigned_to": [
+      "640266cf-cdee-4ad1-9172-1d7578318ea5",
+      "8dedca0d-b398-42ec-bf89-4e5e14a625a5",
+      "95904a63-afc7-45cc-b06e-17ddc9db84d1"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "d26f72e1-c071-488c-bc37-d3d45bf48366",
+    "duration": 5,
+    "start_time": "4:15 PM",
+    "end_time": "9:15 PM",
+    "location": "VIP Lounge",
+    "currently_assigned_to": [
+      "4e5f8431-23e1-498c-9d07-2216a4faba0d",
+      "a314a221-04dd-4ff6-b01c-95672d1af79b"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "d3d9be08-3c24-4678-a510-cea8c1a3913a",
+    "duration": 2,
+    "start_time": "7:30 PM",
+    "end_time": "9:30 PM",
+    "location": "VIP Lounge",
+    "currently_assigned_to": [
+      "5844fd8d-9c46-4699-b3ed-7499c2a4817b",
+      "30d74e81-3fac-4ffb-a9f7-00fb3a21d177",
+      "cf18338c-2e6c-4f59-a529-5b5e35c7f091"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "77995ff8-5720-4568-9884-7b73de263f84",
+    "duration": 7,
+    "start_time": "8:00 AM",
+    "end_time": "3:00 PM",
+    "location": "Balcony",
+    "currently_assigned_to": [
+      "f9585e08-0cf0-4cd6-8f88-9bac4546cd72",
+      "a46c797e-e798-49d2-859c-23d0b916fe2b"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "420f561b-44f2-4456-bf05-14a483ead327",
+    "duration": 5,
+    "start_time": "4:00 PM",
+    "end_time": "9:00 PM",
+    "location": "Outdoor Area",
+    "currently_assigned_to": [
+      "75a49857-4e87-4e55-825f-4db4269c4eb2",
+      "79b44192-17ca-4557-ad84-a85beb811b8b",
+      "9df7361a-f546-4362-a4b8-459f6017767b"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "5e9d475e-5b8a-414d-b612-4e120c341d42",
+    "duration": 6,
+    "start_time": "9:45 AM",
+    "end_time": "3:45 PM",
+    "location": "VIP Lounge",
+    "currently_assigned_to": [],
+    "created_at": "2025-11-01 12:43:06"
+  },
+  {
+    "id": "36cedbc2-ab23-4284-a4d4-3084afc48608",
+    "duration": 6,
+    "start_time": "11:45 AM",
+    "end_time": "5:45 PM",
+    "location": "VIP Lounge",
+    "currently_assigned_to": [
+      "99b6c1f7-09c7-4e0e-bbe8-efa631ae3bb4",
+      "147d495b-54e7-4a85-8743-3ccfaa26edf1",
+      "ec03162c-57d4-4378-949d-f5b2f8b860e5"
+    ],
+    "created_at": "2025-11-01 12:43:06"
+  }
+]

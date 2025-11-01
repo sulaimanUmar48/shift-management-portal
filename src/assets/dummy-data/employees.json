@@ -1,0 +1,202 @@
+[
+  {
+    "id": "emp-001",
+    "first_name": "Ruth",
+    "last_name": "Nwosu",
+    "phone": "+2347190342007",
+    "email": "ruth.nwosu@companymail.com",
+    "role": "Cook",
+    "status": "inactive",
+    "total_hours_worked": 98
+  },
+  {
+    "id": "emp-002",
+    "first_name": "Ibrahim",
+    "last_name": "Ahmed",
+    "phone": "+2348981507890",
+    "email": "ibrahim.ahmed@companymail.com",
+    "role": "Cleaner",
+    "status": "on_leave",
+    "total_hours_worked": 427
+  },
+  {
+    "id": "emp-003",
+    "first_name": "Zainab",
+    "last_name": "Adegoke",
+    "phone": "+2349021930753",
+    "email": "zainab.adegoke@companymail.com",
+    "role": "Bartender",
+    "status": "on_leave",
+    "total_hours_worked": 174
+  },
+  {
+    "id": "emp-004",
+    "first_name": "Sophie",
+    "last_name": "Usman",
+    "phone": "+2349076302252",
+    "email": "sophie.usman@companymail.com",
+    "role": "Cashier",
+    "status": "on_leave",
+    "total_hours_worked": 221
+  },
+  {
+    "id": "emp-005",
+    "first_name": "John",
+    "last_name": "Adegoke",
+    "phone": "+2348880421519",
+    "email": "john.adegoke@companymail.com",
+    "role": "Cleaner",
+    "status": "on_leave",
+    "total_hours_worked": 162
+  },
+  {
+    "id": "emp-006",
+    "first_name": "Emeka",
+    "last_name": "Garba",
+    "phone": "+2348382291603",
+    "email": "emeka.garba@companymail.com",
+    "role": "Cashier",
+    "status": "on_leave",
+    "total_hours_worked": 328
+  },
+  {
+    "id": "emp-007",
+    "first_name": "Ruth",
+    "last_name": "Usman",
+    "phone": "+2348879445813",
+    "email": "ruth.usman@companymail.com",
+    "role": "Security",
+    "status": "on_leave",
+    "total_hours_worked": 405
+  },
+  {
+    "id": "emp-008",
+    "first_name": "Daniel",
+    "last_name": "Yusuf",
+    "phone": "+2348336479254",
+    "email": "daniel.yusuf@companymail.com",
+    "role": "Cook",
+    "status": "inactive",
+    "total_hours_worked": 250
+  },
+  {
+    "id": "emp-009",
+    "first_name": "Michael",
+    "last_name": "Usman",
+    "phone": "+2348131462674",
+    "email": "michael.usman@companymail.com",
+    "role": "Security",
+    "status": "inactive",
+    "total_hours_worked": 470
+  },
+  {
+    "id": "emp-010",
+    "first_name": "Kemi",
+    "last_name": "Ogunleye",
+    "phone": "+2347536258440",
+    "email": "kemi.ogunleye@companymail.com",
+    "role": "Bartender",
+    "status": "on_leave",
+    "total_hours_worked": 84
+  },
+  {
+    "id": "emp-011",
+    "first_name": "Sophie",
+    "last_name": "Ogunleye",
+    "phone": "+2347666634849",
+    "email": "sophie.ogunleye@companymail.com",
+    "role": "Cashier",
+    "status": "on_leave",
+    "total_hours_worked": 255
+  },
+  {
+    "id": "emp-012",
+    "first_name": "Aisha",
+    "last_name": "Adams",
+    "phone": "+2347658544400",
+    "email": "aisha.adams@companymail.com",
+    "role": "Cook",
+    "status": "on_leave",
+    "total_hours_worked": 218
+  },
+  {
+    "id": "emp-013",
+    "first_name": "Paul",
+    "last_name": "Balogun",
+    "phone": "+2348109266682",
+    "email": "paul.balogun@companymail.com",
+    "role": "Security",
+    "status": "active",
+    "total_hours_worked": 331
+  },
+  {
+    "id": "emp-014",
+    "first_name": "Michael",
+    "last_name": "Okoro",
+    "phone": "+2348335257987",
+    "email": "michael.okoro@companymail.com",
+    "role": "Waiter",
+    "status": "on_leave",
+    "total_hours_worked": 333
+  },
+  {
+    "id": "emp-015",
+    "first_name": "Paul",
+    "last_name": "Okoro",
+    "phone": "+2347054395734",
+    "email": "paul.okoro@companymail.com",
+    "role": "Cook",
+    "status": "active",
+    "total_hours_worked": 269
+  },
+  {
+    "id": "emp-016",
+    "first_name": "Victor",
+    "last_name": "Okoro",
+    "phone": "+2348417927881",
+    "email": "victor.okoro@companymail.com",
+    "role": "Cashier",
+    "status": "on_leave",
+    "total_hours_worked": 371
+  },
+  {
+    "id": "emp-017",
+    "first_name": "Emeka",
+    "last_name": "Ogunleye",
+    "phone": "+2347120044239",
+    "email": "emeka.ogunleye@companymail.com",
+    "role": "Cook",
+    "status": "inactive",
+    "total_hours_worked": 438
+  },
+  {
+    "id": "emp-018",
+    "first_name": "Joseph",
+    "last_name": "Bello",
+    "phone": "+2347937995211",
+    "email": "joseph.bello@companymail.com",
+    "role": "Cashier",
+    "status": "inactive",
+    "total_hours_worked": 287
+  },
+  {
+    "id": "emp-019",
+    "first_name": "Grace",
+    "last_name": "Garba",
+    "phone": "+2347075307087",
+    "email": "grace.garba@companymail.com",
+    "role": "Cleaner",
+    "status": "active",
+    "total_hours_worked": 116
+  },
+  {
+    "id": "emp-020",
+    "first_name": "Maryam",
+    "last_name": "Balogun",
+    "phone": "+2347438330721",
+    "email": "maryam.balogun@companymail.com",
+    "role": "Cleaner",
+    "status": "inactive",
+    "total_hours_worked": 496
+  }
+]

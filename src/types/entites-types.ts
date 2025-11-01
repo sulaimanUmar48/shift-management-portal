@@ -1,10 +1,12 @@
 export type Employee = {
     id: string
     first_name: string
+    middle_name: string
     last_name: string
     phone: string
+    email: string
     role: string
-    status: string
+    status: "active" | "inactive" | "on_leave"
     total_hours_worked: number
 }
 
@@ -15,6 +17,8 @@ export type Shift = {
     start_time: string
     end_time: string
     location: string
+    currently_assigned_to: string[]
+    created_at: string
 }
 
 

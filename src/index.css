@@ -12,6 +12,7 @@
 
 ::-webkit-scrollbar{
   width: 2px;
+  height: 2px;
 }
 
 ::-webkit-scrollbar-track {
@@ -20,6 +21,6 @@
 
 
 ::-webkit-scrollbar-thumb{
-  background-color: white;
-  border-radius: 9999px;
+  background-color: #0E6B37;
+  border-radius: 1000px;
 }

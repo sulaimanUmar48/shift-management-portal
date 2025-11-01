@@ -9,14 +9,14 @@ const data = {
       {
         label: "Lateness",
         data: [90, 10],
-        backgroundColor: ["#0E6B37", "#eee"], // use #eee (with #)
+        backgroundColor: ["#0E6B37", "#eee"],
         borderRadius: 5,
       },
     ],
   };
 
   const options: any = {
-    cutout: "70%", // makes it a nice ring
+    cutout: "70%", 
     plugins: {
       legend: { display: false },
       tooltip: { enabled: false },
@@ -24,8 +24,8 @@ const data = {
     maintainAspectRatio: false,
     responsive: true,
     animation: {
-      duration: 1200, // 2 seconds
-      easing: "easeOutQuad", // try "easeInOutQuad" or "easeOutElastic"
+      duration: 1200, 
+      easing: "easeOutQuad", 
     },
   };
 
