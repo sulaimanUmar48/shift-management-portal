@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { usePageStore } from "../store/page-store"
 import StatsCard from "../components/cards/StatsCard"
-import { MdBlock, MdCheckCircle, MdHourglassEmpty, MdMoreTime, MdAddCircle } from "react-icons/md"
+import { MdBlock, MdCheckCircle, MdHourglassEmpty, MdMoreTime } from "react-icons/md"
 import SearchInput from "../components/search-input/SearchInput"
 import Table from "../components/table/Table"
 import type { Overtime } from "../types/entites-types"
@@ -9,7 +9,7 @@ import { createColumnHelper } from "@tanstack/react-table"
 import dat from "../assets/dummy-data/Overtime.json"
 
 
-const Overtime = () => {
+const Overtimes = () => {
 
     // Store Values
     const {setCurrentPage} = usePageStore()
@@ -174,4 +174,4 @@ const Overtime = () => {
   )
 }
 
-export default Overtime
+export default Overtimes

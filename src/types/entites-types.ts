@@ -57,3 +57,17 @@ export type Notification = {
     content: string
     timestamp: string
 }
+
+export type Payroll = {
+    id: string
+    employee_id: string
+    pay_period_start: string
+    pay_period_end: string
+    total_hours_worked: number
+    gross_pay: number
+    deductions: number
+    bonuses: number
+    next_pay: number
+    payment_status: "pending" | "paid"
+    generated_at: string
+}

@@ -18,7 +18,7 @@ const Employees = () => {
     const {setCurrentPage} = usePageStore()
 
 
-    const [data, setData] = useState<Employee[]>(dat as Employee[])
+    const [data] = useState<Employee[]>(dat as Employee[])
     const [searchInput, setSearchInput] = useState("")
     const [currentFilter, setCurrentFilter] = useState<"all" | "active" | "on_leave" | "inactive">("all")
     const [addElementViewState, setAddElementViewState] = useState<boolean>(false)
@@ -38,7 +38,7 @@ const Employees = () => {
       columnHelper.display({
         header: "Assign Shift",
         id: "assign_shift",
-        cell: ({row}) => 
+        cell: ( ) => 
         <div
         className={`
           space-x-1 
@@ -162,12 +162,10 @@ const Employees = () => {
             </div>  
           </div>
           <AddButton setAddElementViewState={setAddElementViewState} />
-
-          
-          
+  
         </div>
 
-              {/* TABLE CONTAINER */}
+        {/* TABLE CONTAINER */}
         <div
         className={`h-123 rounded`}
         >

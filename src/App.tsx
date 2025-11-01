@@ -8,7 +8,7 @@ import RootLayout from './layout/RootLayout'
 import Dashboard from './pages/Dashboard'
 import Shifts from './pages/Shifts'
 import Employees from './pages/Employees'
-import Overtime from './pages/Overtime'
+import Overtimes from './pages/Overtimes'
 import Payroll from './pages/Payroll'
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Route index element={<Dashboard />}/>
         <Route path='shifts' element={<Shifts />}/>
         <Route path='employees' element={<Employees />}/>
-        <Route path='overtime' element={<Overtime />}/>
+        <Route path='overtime' element={<Overtimes />}/>
         <Route path='payroll' element={<Payroll />}/>
       </Route>
     )

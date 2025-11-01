@@ -77,7 +77,7 @@ const Table = <TData extends object>({Data, columnDef, inputColumnFilterID, inpu
         onRowSelectionChange: setRowSelection,
         onPaginationChange: setPagination,
 
-        getRowId: row => row.id,
+        getRowId: row => (row as any).id,
         
         autoResetPageIndex: false,
         enableRowSelection: true,

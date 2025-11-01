@@ -17,7 +17,7 @@ const Shifts = () => {
     const {setCurrentPage} = usePageStore()
 
 
-    const [data, setData] = useState<Shift[]>(dat)
+    const [data] = useState<Shift[]>(dat)
     const [searchInput, setSearchInput] = useState("")
     const [currentFilter, setCurrentFilter] = useState<"all" | "assigned" | "unassigned" >("all")
     const [addElementViewState, setAddElementViewState] = useState<boolean>(false)
