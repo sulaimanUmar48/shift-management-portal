@@ -16,7 +16,7 @@ const Overtimes = () => {
 
     const [currentFilter, setCurrentFilter] = useState<"pending" | "approved" | "rejected">("pending")
     const [searchInput, setSearchInput] = useState("")
-    const [data, setData] = useState<Overtime[]>(dat as Overtime[])
+    const [data] = useState<Overtime[]>(dat as Overtime[])
 
 
     const filters = ["pending", "approved", "rejected"]
@@ -38,7 +38,7 @@ const Overtimes = () => {
       columnHelper.display({
         header: "Action",
         id: "accept/reject",
-        cell: ({row}) => <div className={`flex gap-2`}>
+        cell: ( ) => <div className={`flex gap-2`}>
           <button
           className={`
           text-green-600 cursor-pointer active:scale-90   

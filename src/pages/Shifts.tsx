@@ -52,7 +52,7 @@ const Shifts = () => {
       columnHelper.display({
         header: "Action",
         id: "action",
-        cell: ({row}) => 
+        cell: ( ) => 
                 <div
                 className={`
                   space-x-1 
