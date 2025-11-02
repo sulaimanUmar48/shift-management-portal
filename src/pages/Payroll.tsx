@@ -1,11 +1,14 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { usePageStore } from "../store/page-store"
+import SearchInput from "../components/search-input/SearchInput"
 
 
 const Payroll = () => {
 
     // Store Values
     const {setCurrentPage} = usePageStore()
+
+    const [searchInput, setSearchInput] = useState("")
 
 
     useEffect(()=>{
@@ -14,9 +17,11 @@ const Payroll = () => {
 
   return (
     <div
-    className="h-full max-h-full flex justify-center items-center"
+    className={`
+      h-full max-h-full p-4 flex flex-col gap-4 overflow-y-scroll pb-4 relative 
+    `}
     >
-        <h1 className="text-3xl">This is the Payroll</h1>
+      
     </div>
   )
 }

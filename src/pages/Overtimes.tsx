@@ -167,7 +167,7 @@ const Overtimes = () => {
         <div
         className={`h-123 rounded`}
         >
-          <Table<Overtime> Data={data} columnDef={columnDef} inputColumnFilterID={"id"} inputColumnFilterValue={searchInput} />
+          <Table<Overtime> Data={data} columnDef={columnDef} inputColumnFilterID={"id"} inputColumnFilterValue={searchInput} allowCheckBox={false} />
         </div>
       </div>
     </div>

@@ -9,9 +9,10 @@ type Props<TData extends object> = {
     columnDef: ColumnDef<TData, any>[]
     inputColumnFilterID: string
     inputColumnFilterValue: string
+    allowCheckBox: boolean
 }
 
-const Table = <TData extends object>({Data, columnDef, inputColumnFilterID, inputColumnFilterValue}:Props<TData>) => {
+const Table = <TData extends object>({Data, columnDef, inputColumnFilterID, inputColumnFilterValue, allowCheckBox}:Props<TData>) => {
 
     const data = useMemo(()=> Data ?? [], [Data])
 
@@ -38,7 +39,7 @@ const Table = <TData extends object>({Data, columnDef, inputColumnFilterID, inpu
                 <div className="relative w-3.5 h-3.5">
                 <input 
                 type="checkbox" 
-                onChange={()=>{row.getToggleSelectedHandler()}}
+                onChange={row.getToggleSelectedHandler()}
                 checked={row.getIsSelected()}
                 className={`appearance-none border-[1.5px] border-secondary/70 w-3.5 h-3.5 rounded checked:bg-secondary peer`}
                 />
@@ -49,7 +50,7 @@ const Table = <TData extends object>({Data, columnDef, inputColumnFilterID, inpu
             })
         ]
 
-        return [...checkColumn, ...columnDef]
+        return [...allowCheckBox ? checkColumn : [], ...columnDef]
     }
     , [columnDef])
 
@@ -125,7 +126,8 @@ const Table = <TData extends object>({Data, columnDef, inputColumnFilterID, inpu
                     {table.getRowModel().rows.map( row => 
                         <tr
                         key={row.id}
-                        className={`border-set border-l-0`}
+                        className={`border-set border-l-0 hover:bg-secondary/2`}
+                        onClick={row.getToggleSelectedHandler()}
                         >
                             {row.getVisibleCells().map( cell => 
                                 <td

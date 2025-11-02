@@ -129,7 +129,7 @@ const Shifts = () => {
         <div
         className={`h-123 rounded`}
         >
-          <Table<Shift> Data={data} columnDef={columnDef} inputColumnFilterID={"location"} inputColumnFilterValue={searchInput} />
+          <Table<Shift> Data={data} columnDef={columnDef} inputColumnFilterID={"location"} inputColumnFilterValue={searchInput} allowCheckBox />
         </div>
 
       </div>

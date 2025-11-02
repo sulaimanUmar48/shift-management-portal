@@ -169,7 +169,7 @@ const Employees = () => {
         <div
         className={`h-123 rounded`}
         >
-          <Table<Employee> Data={data} columnDef={columnDef} inputColumnFilterID={"name"} inputColumnFilterValue={searchInput} />
+          <Table<Employee> Data={data} columnDef={columnDef} inputColumnFilterID={"name"} inputColumnFilterValue={searchInput} allowCheckBox={false} />
         </div>
       </div>
 
