@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { usePageStore } from "../store/page-store"
-import SearchInput from "../components/search-input/SearchInput"
+// import SearchInput from "../components/search-input/SearchInput"
 
 
 const Payroll = () => {
@@ -8,7 +8,7 @@ const Payroll = () => {
     // Store Values
     const {setCurrentPage} = usePageStore()
 
-    const [searchInput, setSearchInput] = useState("")
+    // const [searchInput, setSearchInput] = useState("")
 
 
     useEffect(()=>{
