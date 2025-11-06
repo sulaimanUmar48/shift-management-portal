@@ -71,7 +71,7 @@ export type Notification = {
     timestamp: string
 }
 
-export type Payroll = {
+export type PayrollRecord = {
     id: string
     employee_id: string
     employee_name: string

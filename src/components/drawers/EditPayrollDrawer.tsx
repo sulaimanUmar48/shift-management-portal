@@ -1,6 +1,6 @@
 import { MdAdd, MdClose, MdEdit } from "react-icons/md"
 import { usePayrollStore } from "../../store/payroll-store"
-import type { Payroll } from "../../types/entites-types"
+import type { PayrollRecord } from "../../types/entites-types"
 import { toast } from "react-toastify"
 
 type Props = {
@@ -38,7 +38,7 @@ const EditPayrollDrawer = ({viewState, setViewState}:Props) => {
             >
                 {Object.entries(currentPayRoll).map(([key]) => {
 
-                    const payrollkey = key as keyof Payroll
+                    const payrollkey = key as keyof PayrollRecord
 
                     return(
                         <label
@@ -54,7 +54,7 @@ const EditPayrollDrawer = ({viewState, setViewState}:Props) => {
                                 <select 
                                 name={payrollkey} 
                                 value={currentPayRoll[payrollkey]}
-                                onChange={(e) => editCurrentPayroll(payrollkey, e.currentTarget.value as Payroll[typeof payrollkey])}
+                                onChange={(e) => editCurrentPayroll(payrollkey, e.currentTarget.value as PayrollRecord[typeof payrollkey])}
                                 className={`
                                 outline-0 border border-set w-60 rounded text-[12px] px-4 py-2 mx-auto text-xs peer 
                                 max-sm:w-75
@@ -75,7 +75,7 @@ const EditPayrollDrawer = ({viewState, setViewState}:Props) => {
                                     }
 
                                     
-                                    editCurrentPayroll(payrollkey, e.currentTarget.value as Payroll[typeof payrollkey])
+                                    editCurrentPayroll(payrollkey, e.currentTarget.value as PayrollRecord[typeof payrollkey])
                                 
                                 }}
                                 className={`

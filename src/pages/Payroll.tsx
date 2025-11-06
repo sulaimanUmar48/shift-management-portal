@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { usePageStore } from "../store/page-store"
 import SearchInput from "../components/search-input/SearchInput"
 import AddButton from "../components/add-entity/AddButton"
-import type { Payroll } from "../types/entites-types"
+import type { PayrollRecord } from "../types/entites-types"
 import Table from "../components/table/Table"
 import dat from "../assets/dummy-data/Payroll.json"
 import { createColumnHelper } from "@tanstack/react-table"
@@ -36,7 +36,7 @@ const Payroll = () => {
         setCurrentPage("Payroll")
     },[])
 
-    const columnHelper = createColumnHelper<Payroll>()
+    const columnHelper = createColumnHelper<PayrollRecord>()
 
     const columnDef = [
       columnHelper.accessor("id", {
@@ -169,7 +169,7 @@ const Payroll = () => {
         <div
         className={`h-123 rounded`}
         >
-          <Table<Payroll> Data={data as Payroll[]} columnDef={columnDef} inputColumnFilterID={"id"} inputColumnFilterValue={searchInput} allowCheckBox={false} />
+          <Table<PayrollRecord> Data={data as PayrollRecord[]} columnDef={columnDef} inputColumnFilterID={"id"} inputColumnFilterValue={searchInput} allowCheckBox={false} />
         </div>
       
       </div>

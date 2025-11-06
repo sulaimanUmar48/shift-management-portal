@@ -1,9 +1,8 @@
-import { MdAdd, MdClose } from "react-icons/md"
+import { MdClose } from "react-icons/md"
 import { usePageStore } from "../../store/page-store"
-import dat from "../../assets/dummy-data/Payroll.json"
 import { usePayrollStore } from "../../store/payroll-store"
 import { useEffect, useState } from "react"
-import type { Payroll } from "../../types/entites-types"
+import type { PayrollRecord } from "../../types/entites-types"
 
 type Props = {
   viewState: boolean
@@ -17,7 +16,7 @@ const InfomationDrawer = ({viewState, setViewState}: Props) => {
 
     const payrollFilter = ["pay", "bonus", "deduct"]  
 
-    const [pageData, setPageData] = useState<Payroll | null>(null) 
+    const [pageData, setPageData] = useState<PayrollRecord | null>(null) 
 
     useEffect(()=>{
 
