@@ -10,6 +10,7 @@ import Shifts from './pages/Shifts'
 import Employees from './pages/Employees'
 import Overtimes from './pages/Overtimes'
 import Payroll from './pages/Payroll'
+import SignIn from './pages/SignIn'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='employees' element={<Employees />}/>
         <Route path='overtime' element={<Overtimes />}/>
         <Route path='payroll' element={<Payroll />}/>
+        <Route path='sign-in' element={<SignIn/>}/>
       </Route>
     )
   )

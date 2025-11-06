@@ -1,0 +1,167 @@
+[
+  {
+    "id": "shift-001",
+    "employee_id": "emp-001",
+    "start_time": "10:00",
+    "end_time": "20:00",
+    "duration": 10,
+    "tardiness": 2,
+    "location": "Remote",
+    "created_at": "2025-11-06T00:15:56.568775",
+    "is_paid": false    
+  },
+  {
+    "id": "shift-002",
+    "employee_id": "emp-001",
+    "start_time": "07:00",
+    "end_time": "14:00",
+    "duration": 7,
+    "tardiness": 0,
+    "location": "Branch A",
+    "created_at": "2025-11-06T00:15:56.568792",
+    "is_paid": false    
+  },
+  {
+    "id": "shift-003",
+    "employee_id": "emp-001",
+    "start_time": "07:00",
+    "end_time": "17:00",
+    "duration": 10,
+    "tardiness": 0,
+    "location": "Remote",
+    "created_at": "2025-11-06T00:15:56.568802",
+    "is_paid": false    
+  },
+  {
+    "id": "shift-004",
+    "employee_id": "emp-002",
+    "start_time": "09:00",
+    "end_time": "19:00",
+    "duration": 10,
+    "tardiness": 1,
+    "location": "Main Office",
+    "created_at": "2025-11-06T00:15:56.568812",
+    "is_paid": false    
+  },
+  {
+    "id": "shift-005",
+    "employee_id": "emp-002",
+    "start_time": "07:00",
+    "end_time": "14:00",
+    "duration": 7,
+    "tardiness": 2,
+    "location": "Warehouse",
+    "created_at": "2025-11-06T00:15:56.568821",
+    "is_paid": false    
+  },
+  {
+    "id": "shift-006",
+    "employee_id": "emp-002",
+    "start_time": "09:00",
+    "end_time": "18:00",
+    "duration": 9,
+    "tardiness": 0,
+    "location": "Branch A",
+    "created_at": "2025-11-06T00:15:56.568830",
+    "is_paid": false    
+  },
+  {
+    "id": "shift-007",
+    "employee_id": "emp-003",
+    "start_time": "06:00",
+    "end_time": "16:00",
+    "duration": 10,
+    "tardiness": 0,
+    "location": "Branch A",
+    "created_at": "2025-11-06T00:15:56.568841",
+    "is_paid": false    
+  },
+  {
+    "id": "shift-008",
+    "employee_id": "emp-003",
+    "start_time": "08:00",
+    "end_time": "16:00",
+    "duration": 8,
+    "tardiness": 2,
+    "location": "Main Office",
+    "created_at": "2025-11-06T00:15:56.568853",
+    "is_paid": false    
+  },
+  {
+    "id": "shift-009",
+    "employee_id": "emp-003",
+    "start_time": "09:00",
+    "end_time": "17:00",
+    "duration": 8,
+    "tardiness": 1,
+    "location": "Remote",
+    "created_at": "2025-11-06T00:15:56.568864",
+    "is_paid": false    
+  },
+  {
+    "id": "shift-010",
+    "employee_id": "emp-004",
+    "start_time": "06:00",
+    "end_time": "15:00",
+    "duration": 9,
+    "tardiness": 0,
+    "location": "Remote",
+    "created_at": "2025-11-06T00:15:56.568875",
+    "is_paid": false    
+  },
+  {
+    "id": "shift-011",
+    "employee_id": "emp-004",
+    "start_time": "08:00",
+    "end_time": "14:00",
+    "duration": 6,
+    "tardiness": 0,
+    "location": "Main Office",
+    "created_at": "2025-11-06T00:15:56.568884",
+    "is_paid": false    
+  },
+  {
+    "id": "shift-012",
+    "employee_id": "emp-004",
+    "start_time": "06:00",
+    "end_time": "16:00",
+    "duration": 10,
+    "tardiness": 2,
+    "location": "Main Office",
+    "created_at": "2025-11-06T00:15:56.568894",
+    "is_paid": false    
+  },
+  {
+    "id": "shift-013",
+    "employee_id": "emp-005",
+    "start_time": "08:00",
+    "end_time": "18:00",
+    "duration": 10,
+    "tardiness": 0,
+    "location": "Branch A",
+    "created_at": "2025-11-06T00:15:56.568904",
+    "is_paid": false    
+  },
+  {
+    "id": "shift-014",
+    "employee_id": "emp-005",
+    "start_time": "07:00",
+    "end_time": "16:00",
+    "duration": 9,
+    "tardiness": 2,
+    "location": "Remote",
+    "created_at": "2025-11-06T00:15:56.568913",
+    "is_paid": false    
+  },
+  {
+    "id": "shift-015",
+    "employee_id": "emp-005",
+    "start_time": "06:00",
+    "end_time": "13:00",
+    "duration": 7,
+    "tardiness": 2,
+    "location": "Branch A",
+    "created_at": "2025-11-06T00:15:56.568922",
+    "is_paid": false    
+  }
+]

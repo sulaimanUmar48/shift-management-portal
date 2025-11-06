@@ -7,7 +7,7 @@ export type Employee = {
     email: string
     role: string
     status: "active" | "inactive" | "on_leave"
-    total_hours_worked: number
+    hourly_rate: number
 }
 
 
@@ -19,6 +19,19 @@ export type Shift = {
     location: string
     currently_assigned_to: string[]
     created_at: string
+}
+
+export type ShiftRecord = {
+    id: string
+    string_id: string
+    employee_id: string
+    date_id: string
+    start_time: string
+    end_time: string
+    duration: number
+    tardiness_count: number
+    overtime_hours: number
+    is_paid: boolean    
 }
 
 
@@ -61,13 +74,16 @@ export type Notification = {
 export type Payroll = {
     id: string
     employee_id: string
+    employee_name: string
     pay_period_start: string
     pay_period_end: string
+    total_shifts: number
     total_hours_worked: number
     gross_pay: number
+    overtime_pay: number
     deductions: number
     bonuses: number
-    next_pay: number
+    net_pay: number
     payment_status: "pending" | "paid"
     generated_at: string
 }

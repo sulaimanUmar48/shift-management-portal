@@ -4,9 +4,9 @@ import StatsCard from "../components/cards/StatsCard"
 import { MdAddCircle, MdAssignmentInd, MdBeachAccess, MdDelete, MdEdit, MdGroupOff, MdGroups } from "react-icons/md"
 import Table from "../components/table/Table"
 import type { Employee } from "../types/entites-types"
+import dat from "../assets/dummy-data/employees.json"
 import { createColumnHelper } from "@tanstack/react-table"
 import SearchInput from "../components/search-input/SearchInput"
-import dat from "../assets/dummy-data/employees.json"
 import AddElement from "../components/add-entity/AddElement"
 import AddButton from "../components/add-entity/AddButton"
 import ConfirmationModal from "../components/modals/ConfirmationModal"
@@ -92,6 +92,10 @@ const Employees = () => {
       }),
       columnHelper.accessor("role", {
         header: "Role"
+      }),
+      columnHelper.accessor("hourly_rate", {
+        header: "Hourly Rate",
+        cell: ({getValue}) => <span>${getValue()}</span>
       }),
       columnHelper.accessor("status", {
         header: "Status",

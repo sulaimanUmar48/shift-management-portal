@@ -1,6 +1,9 @@
 import { Outlet } from "react-router-dom"
 import SideBar from "../components/sidebar/SideBar"
 import Header from "../components/header/Header"
+import { ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const RootLayout = () => {
   return (
@@ -18,6 +21,7 @@ const RootLayout = () => {
                 </div>
             </div>
         </main>
+        <ToastContainer position="top-right" autoClose={4000} pauseOnHover/>
     </div>
   )
 }

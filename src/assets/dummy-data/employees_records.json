@@ -1,0 +1,57 @@
+[
+  {
+    "id": "emp-001",
+    "first_name": "Amaka",
+    "middle_name": "Grace",
+    "last_name": "Nwosu",
+    "phone": "08036124913",
+    "email": "employee1@company.com",
+    "role": "Security",
+    "status": "inactive",
+    "gross_income": 248650
+  },
+  {
+    "id": "emp-002",
+    "first_name": "Tolu",
+    "middle_name": "Tomiwa",
+    "last_name": "Nwosu",
+    "phone": "08018538119",
+    "email": "employee2@company.com",
+    "role": "Security",
+    "status": "inactive",
+    "gross_income": 126220
+  },
+  {
+    "id": "emp-003",
+    "first_name": "Amaka",
+    "middle_name": "Olu",
+    "last_name": "Umar",
+    "phone": "08078401840",
+    "email": "employee3@company.com",
+    "role": "Cashier",
+    "status": "active",
+    "gross_income": 164326
+  },
+  {
+    "id": "emp-004",
+    "first_name": "John",
+    "middle_name": "Tomiwa",
+    "last_name": "Ibrahim",
+    "phone": "08056474251",
+    "email": "employee4@company.com",
+    "role": "Security",
+    "status": "on_leave",
+    "gross_income": 150313
+  },
+  {
+    "id": "emp-005",
+    "first_name": "John",
+    "middle_name": "Chika",
+    "last_name": "Balogun",
+    "phone": "08076712955",
+    "email": "employee5@company.com",
+    "role": "Supervisor",
+    "status": "inactive",
+    "gross_income": 209412
+  }
+]

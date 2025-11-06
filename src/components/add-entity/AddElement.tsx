@@ -1,4 +1,4 @@
-import { useEffect, useState, type FormEvent } from "react"
+import { useState, type FormEvent } from "react"
 import { usePageStore } from "../../store/page-store"
 import type { Employee } from "../../types/entites-types"
 import { typedKeys } from "../../helper-functions/typedKeys"
@@ -10,7 +10,8 @@ type Props = {
   setViewState: (value: false) => void
 }
 
-type EmployeeInput = Omit<Employee, "id" | "role" | "status" | "total_hours_worked">
+type EmployeeInput = Omit<Employee, "id" | "role" | "status" | "total_hours_worked" >
+
 
 const AddElement = ({viewState, setViewState}: Props) => {
 
@@ -22,14 +23,16 @@ const AddElement = ({viewState, setViewState}: Props) => {
     middle_name: "",
     last_name: "",
     phone: "",
-    email: ""
+    email: "",
+    hourly_rate: 0,
   }
+  console.log(currentPage)
+
+
 
   const [pageValue, setPageValue] = useState<EmployeeInput>(inputEmployeesValue)
 
-  useEffect(()=>{
-
-  }, [currentPage])
+  if(pageValue === null) return
 
   function renderInputs(){
       if(pageValue !== null){
@@ -43,7 +46,11 @@ const AddElement = ({viewState, setViewState}: Props) => {
               outline-0 border border-set w-60 rounded text-[12px] px-4 py-2 mx-auto text-xs peer 
               max-sm:w-75  
               `}
-            type={key === "email" ? "email" : "text"} 
+            type={
+              key === "email" ? "email" :
+              key === "hourly_rate" ? "number" 
+              : "text"
+            } 
             value={pageValue[key]}
             name={key}
             onChange={ e =>{
@@ -94,9 +101,12 @@ const AddElement = ({viewState, setViewState}: Props) => {
         className={`w-full mt-10 flex flex-col items-center gap-4`}
         onSubmit={handleSubmit}
         >
-
-          {renderInputs()}
-          <div className="flex justify-end w-full pr-6 mt-8 gap-2">
+          <div
+          className={`max-h-96 overflow-scroll flex flex-col gap-3 py-1`}
+          >
+            {renderInputs()}
+          </div>
+          <div className="flex justify-end w-full pr-6 mt-8 gap-2 ">
             <button
             className={`
               text-[11px] py-1.5 px-3 bg-primary rounded text-secondary shadow cursor-pointer active:scale-90 select-none transition-set flex items-center gap-1
