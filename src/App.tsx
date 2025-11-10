@@ -11,6 +11,7 @@ import Employees from './pages/Employees'
 import Overtimes from './pages/Overtimes'
 import Payroll from './pages/Payroll'
 import SignIn from './pages/SignIn'
+import Record from './pages/Record'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Route path='/' element={<RootLayout />}>
         <Route index element={<Dashboard />}/>
         <Route path='shifts' element={<Shifts />}/>
+        <Route path='shift-records' element={<Record />}/>
         <Route path='employees' element={<Employees />}/>
         <Route path='overtime' element={<Overtimes />}/>
         <Route path='payroll' element={<Payroll />}/>

@@ -23,9 +23,9 @@ export type Shift = {
 
 export type ShiftRecord = {
     id: string
-    string_id: string
+    shift_id: string
     employee_id: string
-    date_id: string
+    date: string
     start_time: string
     end_time: string
     duration: number

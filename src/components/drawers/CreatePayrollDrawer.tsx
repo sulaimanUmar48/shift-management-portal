@@ -2,7 +2,9 @@ import { useEffect, useState } from "react"
 import { MdClose,  MdCreateNewFolder, MdSearch, MdSettings } from "react-icons/md"
 import { toast } from "react-toastify"
 import dat from "../../assets/dummy-data/employees.json"
+import dat_2 from "../../assets/dummy-data/shift_records_40_randomized.json"
 import type { Employee } from "../../types/entites-types"
+import { calculateTotalNetPay } from "../../helper-functions/calculateTotalNetPay"
 
 type Props = {
   viewState: boolean
@@ -17,6 +19,15 @@ const CreatePayrollDrawer = ({viewState, setViewState}:Props) => {
     const [endDate, setEndDate] = useState("")
     const [bonus, setBonus] = useState(0)
     const [name, setName] = useState("")
+    const [employee_ID, setEmployee_ID] = useState("")
+
+    const [hourlyPay, setHourlyPay] = useState(0)
+    
+    const [totalHours, setTotalHours] = useState(0)
+    const [grossPay, setGrossPay] = useState(0)
+    const [overtimePay, setOvertimePay] = useState(0)
+    const [tardinessDeduction, setTardinessDediction] = useState(0)
+    const [netPay, setNetPay] = useState(0)
 
     const [filteredEmployees, setFilteredEmployees] = useState<Employee[] | null>(null)
 
@@ -36,6 +47,30 @@ const CreatePayrollDrawer = ({viewState, setViewState}:Props) => {
             setEmployeeListDropDownState(false)
         }
     },[searchEmployeesValue])
+
+
+
+    useEffect(()=>{
+        if(!employee_ID || (!startDate && !endDate)){
+            return
+        }
+
+        if(startDate && endDate){
+            if(new Date(startDate) > new Date(endDate)){
+                toast.error("Error! End Date Cannot be less than start Date")
+
+                return
+            }
+        }
+
+        const {totalHours, grossPay, overtime, tardinessDeduction, netPay} = calculateTotalNetPay(dat_2, employee_ID, startDate, endDate, hourlyPay)
+        setTotalHours(totalHours)
+        setGrossPay(grossPay)
+        setOvertimePay(overtime)
+        setTardinessDediction(tardinessDeduction)
+        setNetPay(netPay)
+
+    },[employee_ID, startDate, endDate, bonus])
    
 
     function filterEmployees(employees: Employee[]){
@@ -82,12 +117,15 @@ const CreatePayrollDrawer = ({viewState, setViewState}:Props) => {
                     
                         {filteredEmployees.map( employee => 
                         <button
+                        key={employee.id}
                         className={`p-2 px-4 w-full flex justify-between text-[9px] cursor-pointer bg-primary-comp-two rounded active:scale-95 transition-set
                         hover:bg-accent-one hover:text-white    
                         `}
                         onClick={()=>{
                             setName(`${employee.first_name + ` ` + employee.last_name}`)
                             setSearchEmployeesValue(`${employee.first_name + ` ` + employee.last_name}`)
+                            setEmployee_ID(employee.id)
+                            setHourlyPay(employee.hourly_rate)
                             setTimeout(()=>{
                                 setEmployeeListDropDownState(false)
                             },100)
@@ -223,7 +261,7 @@ const CreatePayrollDrawer = ({viewState, setViewState}:Props) => {
                         Total Hours: 
                     </span>
                     <p>
-                        0
+                        {totalHours}
                     </p>
                 </div>
                 
@@ -233,7 +271,7 @@ const CreatePayrollDrawer = ({viewState, setViewState}:Props) => {
                         Gross Pay: 
                     </span>
                     <p>
-                        0
+                        ${grossPay}
                     </p>
                 </div>
 
@@ -244,7 +282,7 @@ const CreatePayrollDrawer = ({viewState, setViewState}:Props) => {
                         Overtime Pay: 
                     </span>
                     <p>
-                        0
+                        ${overtimePay}
                     </p>
                 </div>
 
@@ -254,7 +292,7 @@ const CreatePayrollDrawer = ({viewState, setViewState}:Props) => {
                         Deduction: 
                     </span>
                     <p>
-                        0
+                        ${tardinessDeduction}
                     </p>
                 </div>
 
@@ -264,7 +302,7 @@ const CreatePayrollDrawer = ({viewState, setViewState}:Props) => {
                         Net Pay: 
                     </span>
                     <p>
-                        0
+                        ${netPay + bonus}
                     </p>
                 </div>
 

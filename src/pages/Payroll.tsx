@@ -48,9 +48,6 @@ const Payroll = () => {
       columnHelper.accessor("employee_id", {
         header: "Employee ID"
       }),
-      columnHelper.accessor("total_hours_worked", {
-        header: "Total_hours"
-      }),
       columnHelper.accessor("gross_pay", {
         header: "Gross Pay",
         cell: ({getValue}) => <span>${getValue()}</span>

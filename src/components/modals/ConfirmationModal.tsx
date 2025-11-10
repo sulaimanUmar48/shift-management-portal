@@ -5,6 +5,8 @@ import { useModalStore } from "../../store/modal-store"
 const ConfirmationModal = () => {
     const {confirmationModal, setConfirmation, confirmationMessage} = useModalStore()
 
+    
+
   return (
     <div className={`
         absolute w-full h-full bg-secondary/40 left-0 top-0 flex-center

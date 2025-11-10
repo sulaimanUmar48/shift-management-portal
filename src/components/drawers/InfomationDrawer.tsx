@@ -2,7 +2,8 @@ import { MdClose } from "react-icons/md"
 import { usePageStore } from "../../store/page-store"
 import { usePayrollStore } from "../../store/payroll-store"
 import { useEffect, useState } from "react"
-import type { PayrollRecord } from "../../types/entites-types"
+import type { PayrollRecord, ShiftRecord } from "../../types/entites-types"
+import { useRecordStore } from "../../store/shift-records-store"
 
 type Props = {
   viewState: boolean
@@ -13,18 +14,22 @@ const InfomationDrawer = ({viewState, setViewState}: Props) => {
 
     const {currentPage} = usePageStore()
     const {currentPayRoll} = usePayrollStore()
+    const {currentRecord} = useRecordStore()
 
     const payrollFilter = ["pay", "bonus", "deduct"]  
 
-    const [pageData, setPageData] = useState<PayrollRecord | null>(null) 
+    const [pageData, setPageData] = useState<PayrollRecord | ShiftRecord | null>(null) 
 
     useEffect(()=>{
 
         if(currentPage === "Payroll"){
             setPageData(currentPayRoll)
         }
+        else if(currentPage === "Records"){
+            setPageData(currentRecord)
+        }
 
-    },[currentPayRoll])
+    },[currentPayRoll, currentRecord])
 
     if(pageData === null) return
 
@@ -36,7 +41,10 @@ const InfomationDrawer = ({viewState, setViewState}: Props) => {
     `}
     >
         <p className={`font-semibold text-xs`}>
-            {currentPage === "Payroll" ? "View Payroll Details" : ""}
+            {currentPage === "Payroll" ? "View Payroll Details" :
+                currentPage === "Records" ? "View Shift Record Details" : 
+                ""
+            }
         </p>
 
         <div 
