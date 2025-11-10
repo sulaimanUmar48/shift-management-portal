@@ -1,7 +1,7 @@
 import type { ShiftRecord } from "../types/entites-types"
 import { dateRangeFilter } from "./dateRangeFilter"
 
-export const calculateTotalNetPay = (data: ShiftRecord[], employeeID:string, startDate: string, endDate: string, hourlyRate: number, bonus?: number) => 
+export const calculateTotalNetPay = (data: ShiftRecord[], employeeID:string, startDate: string, endDate: string, hourlyRate: number) => 
 {
 
     const dateFilteredData = dateRangeFilter(startDate, endDate, data)

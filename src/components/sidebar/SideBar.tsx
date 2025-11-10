@@ -1,5 +1,5 @@
 import PageLink from "./PageLink"
-import { MdAccessTime, MdAlarm, MdAlbum, MdAttachMoney, MdDashboard, MdFiberManualRecord, MdGroups, MdRadioButtonChecked, MdRadioButtonUnchecked } from "react-icons/md"
+import { MdAccessTime, MdAlarm, MdAttachMoney, MdDashboard, MdGroups, MdRadioButtonChecked } from "react-icons/md"
 
 const SideBar = () => {
   return (
