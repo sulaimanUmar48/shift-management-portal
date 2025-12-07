@@ -36,7 +36,6 @@ const StaffDashboard = () => {
   const today = new Date().toISOString().split("T")[0]
   const tomorrow = new Date()
   tomorrow.setDate(tomorrow.getDate() + 1)
-  const testtomorrow = tomorrow.toISOString().split("T")[0]
 
   if (!userDetails) return
 
@@ -96,7 +95,7 @@ const StaffDashboard = () => {
 
     console.log(sortedData)
 
-  const todayShift = userShiftRecords ? userShiftRecords.filter( rec => rec.date === testtomorrow) : []
+  const todayShift = userShiftRecords ? userShiftRecords.filter( rec => rec.date === today) : []
 
 
   return (

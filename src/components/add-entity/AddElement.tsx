@@ -4,8 +4,6 @@ import type { Employee, Shift } from "../../types/entites-types"
 import { typedKeys } from "../../helper-functions/typedKeys"
 import { MdAdd, MdClose } from "react-icons/md"
 import { useModalStore } from "../../store/modal-store"
-import { useEmployeesStore } from "../../store/employees-store"
-import { useShiftStore } from "../../store/shifts-store"
 import { generateCustomID } from "../../helper-functions/generateID"
 
 type Props = {
@@ -117,7 +115,6 @@ const AddElement = ({viewState, setViewState}: Props) => {
     } else{
 
       message = `Location: ${String(pageValue.location)} \n 
-      Duration: ${String(pageValue.duration)} \n
       Start Time: ${String(pageValue.start_time)} \n
       End Time: ${String(pageValue.end_time)} \n
       `

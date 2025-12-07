@@ -5,7 +5,6 @@ import {doc, onSnapshot, setDoc} from "firebase/firestore"
 import { employeesRef } from "../firebase/collections";
 import { toast } from "react-toastify";
 import { auth } from "../firebase/config";
-import { generateCustomID } from "../helper-functions/generateID";
 
 type EmployeesStore = { 
     employees: Employee[] 

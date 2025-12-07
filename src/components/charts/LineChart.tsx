@@ -81,8 +81,6 @@ const LineChart = () => {
                 display: true,            
                 color: "rgba(0,0,0,0.1)",   
                 lineWidth: 1,
-                borderDash: [6, 6],        
-                drawBorder: false,  
             },
             title: {
                 display: true,   

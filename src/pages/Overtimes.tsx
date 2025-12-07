@@ -16,7 +16,7 @@ const Overtimes = () => {
 
     const [currentFilter, setCurrentFilter] = useState<"pending" | "approved" | "rejected">("pending")
     const [searchInput, setSearchInput] = useState("")
-    const [data] = useState<Overtime[]>(dat as Overtime[])
+    const [data] = useState<Overtime[]>([])
 
 
     const filters = ["pending", "approved", "rejected"]
@@ -82,8 +82,8 @@ const Overtimes = () => {
       columnHelper.accessor("id", {
         header: "ID"
       }),
-      columnHelper.accessor("shift_name", {
-        header: "Shift Name"
+      columnHelper.accessor("shift_location", {
+        header: "Shift Location"
       }),
       columnHelper.accessor("shift_id", {
         header: "Shift ID"

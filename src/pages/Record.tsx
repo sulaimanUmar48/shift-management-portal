@@ -39,7 +39,7 @@ const Record = () => {
         }
 
         const filteredData = dateRangeFilter(startDate, endDate, dat)
-        setData(filteredData)
+        setData([]) // !!!!!!!!!!!!!
     }, [startDate, endDate])
 
     const columnHelper = createColumnHelper<ShiftRecord>()

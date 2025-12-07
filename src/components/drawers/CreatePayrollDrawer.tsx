@@ -3,7 +3,7 @@ import { MdClose,  MdCreateNewFolder, MdSearch, MdSettings } from "react-icons/m
 import { toast } from "react-toastify"
 import dat from "../../assets/dummy-data/employees.json"
 import dat_2 from "../../assets/dummy-data/shift_records_40_randomized.json"
-import type { Employee } from "../../types/entites-types"
+import type { Employee, ShiftRecord } from "../../types/entites-types"
 import { calculateTotalNetPay } from "../../helper-functions/calculateTotalNetPay"
 
 type Props = {
@@ -63,7 +63,7 @@ const CreatePayrollDrawer = ({viewState, setViewState}:Props) => {
             }
         }
 
-        const {totalHours, grossPay, overtime, tardinessDeduction, netPay} = calculateTotalNetPay(dat_2, employee_ID, startDate, endDate, hourlyPay)
+        const {totalHours, grossPay, overtime, tardinessDeduction, netPay} = calculateTotalNetPay(dat_2 as ShiftRecord[], employee_ID, startDate, endDate, hourlyPay)
         setTotalHours(totalHours)
         setGrossPay(grossPay)
         setOvertimePay(overtime)
