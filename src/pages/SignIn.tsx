@@ -1,38 +1,39 @@
-import { useState, type FormEvent } from "react"
+import { useEffect, useState, type FormEvent } from "react"
 import { MdEmail, MdLock, MdLogin, MdVisibility, MdVisibilityOff } from "react-icons/md"
 import {PulseLoader} from "react-spinners"
-import { toast } from "react-toastify"
+import { useAuthStore } from "../store/auth-store"
+import { useNavigate } from "react-router-dom"
 
 const SignIn = () => {
 
+    const {signInUser, loading, asyncLoading, user} = useAuthStore()
+
     const [viewPassword, setViewPassword] = useState(false)
-    const [loading, setLoading] = useState(false)
+    const navigate = useNavigate()
 
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        setLoading(true)
-        try{
-            await new Promise((resolve) => setTimeout(resolve, 5000))
 
-            const isFailed = Math.random() < 0.5
-            console.log(isFailed)
-            if (isFailed) throw new Error("Network Request Failed")
-            toast.success("Login In Successful")
-        }
-        catch(err: any){
-            toast.error(err.message)
-        }
-        finally{
-            setLoading(false)
-        }
+        e.preventDefault()
+        const formData = new FormData(e.currentTarget)
+        const email = formData.get("email")
+        const password = formData.get("password")
+        console.log(email, password)
+        await signInUser(email as string, password as string)
+
     }
 
+    useEffect(()=>{
+        if(!loading && user){
+            navigate("/")
+        }
+        console.log(user)
+    }, [user, loading, navigate])
 
   return (
     <div
     className={`
-      h-screen max-h-screen w-screen p-4 flex flex-col gap-4 overflow-y-scroll pb-4 absolute top-0 right-0 bg-primary flex-center
+      h-screen max-h-screen w-screen p-4 flex flex-col gap-4 overflow-y-scroll pb-4 absolute top-0 right-0 bg-primary flex-center z-10000
     `}
     > 
         <form 
@@ -74,6 +75,7 @@ const SignIn = () => {
                     />
                     <input 
                     type="email" 
+                    name="email"
                     required
                     />
 
@@ -88,6 +90,7 @@ const SignIn = () => {
                     
                     <input 
                     type={viewPassword ? 'text' : 'password'} 
+                    name="password"
                     required
                     />
 
@@ -116,7 +119,7 @@ const SignIn = () => {
             `}
             >
                 {
-                    loading ? 
+                    asyncLoading ? 
                     <PulseLoader
                     size={8} 
                     color={"#FFF"}

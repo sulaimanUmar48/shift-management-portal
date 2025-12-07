@@ -8,12 +8,12 @@ export type Employee = {
     role: string
     status: "active" | "inactive" | "on_leave"
     hourly_rate: number
+    firebase_id: string
 }
 
 
 export type Shift = {
     id: string
-    duration: number
     start_time: string
     end_time: string
     location: string
@@ -28,10 +28,13 @@ export type ShiftRecord = {
     date: string
     start_time: string
     end_time: string
-    duration: number
     tardiness_count: number
     overtime_hours: number
-    is_paid: boolean    
+    is_paid: boolean  
+    clock_in_time: string
+    clock_out_time: string
+    location: string
+    status: "pending" | "observed" | "missed"  
 }
 
 
@@ -39,7 +42,7 @@ export type Overtime = {
     id: string
     employee_id: string
     shift_id: string
-    shift_name: string
+    shift_location: string
     hours: number
     reason: string
     requested_at: string
@@ -86,4 +89,18 @@ export type PayrollRecord = {
     net_pay: number
     payment_status: "pending" | "paid"
     generated_at: string
+}
+
+
+export type TimeOffRequests = {
+    id: string
+    employee_id: string
+    reason: string
+    start_date: string
+    end_status: string
+    timestamp: string
+    status: "approved" | "pending" | "rejected" 
+    supervisor_id: string | null
+    approved_at: string
+    rejected_at: string
 }

@@ -1,11 +1,18 @@
+import { useAuthStore } from "../../store/auth-store"
 import PageLink from "./PageLink"
 import { MdAccessTime, MdAlarm, MdAttachMoney, MdDashboard, MdGroups, MdRadioButtonChecked } from "react-icons/md"
 
 const SideBar = () => {
+
+    const {user} = useAuthStore()
+
+    if (!user) return
+
   return (
     <div className={`
         bg-primary-comp min-w-40 h-full border-[#cecece53] border overflow-hidden
             max-sm:min-w-10.5 max-sm:w-10.5
+            
     `}>
 
         {/* COMPANY LOGO */}

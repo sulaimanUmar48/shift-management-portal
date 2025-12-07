@@ -2,18 +2,20 @@ import { MdExpandMore } from "react-icons/md"
 import HeaderDropDown from "./HeaderDropDown"
 import { useState } from "react"
 import { usePageStore } from "../../store/page-store"
+import { useAuthStore } from "../../store/auth-store"
 
 const Header = () => {
 
     // Store Values
     const {currentPage} = usePageStore()
+    const {userDetails} = useAuthStore()
 
     const [isDropDownActive, setIsDropDownActive] = useState(false)
 
 
   return (
     <header
-    className=" w-full h-15 border-0 border-b border-set"
+    className=" w-full h-15 border-0 border-b border-set relative z-1000"
     >
         <nav
         className="flex justify-between items-center px-6 h-full"
@@ -40,14 +42,14 @@ const Header = () => {
                     <p 
                     className="text-xs font-semibold max-sm:text-[10px]"
                     >
-                        Umar-Balogun Sulaiman
+                        {userDetails?.first_name} {userDetails?.last_name}
                     </p>
                     
                     {/* User Role */}
                     <p
                     className="text-[10px] max-sm:text-[8px]"
                     >
-                        Admin
+                        {userDetails?.role}
                     </p>
                 </div>
                 <div>

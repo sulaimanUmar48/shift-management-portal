@@ -8,7 +8,7 @@ import { calculateTotalNetPay } from "../../helper-functions/calculateTotalNetPa
 
 type Props = {
   viewState: boolean
-  setViewState: (value: false) => void
+  setViewState: (value: boolean) => void
 }
 
 
@@ -70,7 +70,7 @@ const CreatePayrollDrawer = ({viewState, setViewState}:Props) => {
         setTardinessDediction(tardinessDeduction)
         setNetPay(netPay)
 
-    },[employee_ID, startDate, endDate, bonus])
+    },[employee_ID, startDate, endDate, bonus, hourlyPay])
    
 
     function filterEmployees(employees: Employee[]){

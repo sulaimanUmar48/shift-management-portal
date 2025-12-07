@@ -151,7 +151,9 @@ const Overtimes = () => {
                 <button
                 key={filter}
                 className={`text-[9px] py-1 px-2 rounded-sm ${filter === currentFilter && "bg-secondary text-secondary-text"} cursor-pointer active:scale-95 transition-set capitalize font-semibold`}
-                onClick={()=>{setCurrentFilter(filter as "pending" | "approved" | "rejected")}}
+                onClick={()=>{
+                  setCurrentFilter(filter as "pending" | "approved" | "rejected");
+                }}
                 >
                   {filter}
                 </button>

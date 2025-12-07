@@ -1,7 +1,8 @@
-import {Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement,Tooltip, Legend} from "chart.js"
+import {Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement,Tooltip, Legend, Filler} from "chart.js"
 import {Line} from "react-chartjs-2"
+import type { ChartOptions } from "chart.js"
 
-ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Legend)
+ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Legend, Filler)
 
 const LineChart = () => {
 
@@ -34,7 +35,7 @@ const LineChart = () => {
     ],
   }
 
-    const options: any = {
+    const options: ChartOptions<"line"> = {
         responsive: true,
         maintainAspectRatio: false,
         plugins: {

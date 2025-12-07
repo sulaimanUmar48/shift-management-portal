@@ -3,6 +3,7 @@ import type {ColumnDef, PaginationState, RowSelectionState} from "@tanstack/reac
 import { useEffect, useMemo, useState} from "react"
 import { LuCheck } from "react-icons/lu"
 import { MdChevronLeft, MdChevronRight } from "react-icons/md"
+import { filterIncludesCaseInsensitive } from "../../helper-functions/tableColumnFilter"
 
 type Props<TData extends object> = {
     Data: TData[],
@@ -82,6 +83,10 @@ const Table = <TData extends object>({Data, columnDef, inputColumnFilterID, inpu
         
         autoResetPageIndex: false,
         enableRowSelection: true,
+
+        filterFns: {
+            filterOne: filterIncludesCaseInsensitive           
+        }
 
     })
 

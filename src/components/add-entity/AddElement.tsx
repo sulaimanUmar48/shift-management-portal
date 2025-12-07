@@ -1,9 +1,12 @@
-import { useState, type FormEvent } from "react"
+import { useEffect, useState, type FormEvent } from "react"
 import { usePageStore } from "../../store/page-store"
-import type { Employee } from "../../types/entites-types"
+import type { Employee, Shift } from "../../types/entites-types"
 import { typedKeys } from "../../helper-functions/typedKeys"
 import { MdAdd, MdClose } from "react-icons/md"
 import { useModalStore } from "../../store/modal-store"
+import { useEmployeesStore } from "../../store/employees-store"
+import { useShiftStore } from "../../store/shifts-store"
+import { generateCustomID } from "../../helper-functions/generateID"
 
 type Props = {
   viewState: boolean
@@ -12,11 +15,15 @@ type Props = {
 
 type EmployeeInput = Omit<Employee, "id" | "role" | "status" | "total_hours_worked" >
 
+type ShiftInput = Omit<Shift, "id" | "currently_assigned_to" | "created_at">
+
+
 
 const AddElement = ({viewState, setViewState}: Props) => {
 
   const {currentPage} = usePageStore()
-  const {setConfirmation} = useModalStore()
+  const {setConfirmation, setConfirmationObject} = useModalStore()
+
 
   const inputEmployeesValue: EmployeeInput = {
     first_name: "",
@@ -25,12 +32,32 @@ const AddElement = ({viewState, setViewState}: Props) => {
     phone: "",
     email: "",
     hourly_rate: 0,
+    firebase_id: ""
   }
+
+  const inputShiftsValue: ShiftInput = {
+    start_time: "",
+    end_time: "",
+    location: "",
+  }
+
   console.log(currentPage)
 
 
 
-  const [pageValue, setPageValue] = useState<EmployeeInput>(inputEmployeesValue)
+  const [pageValue, setPageValue] = useState<EmployeeInput | ShiftInput | null>(
+    currentPage === "Employees" ? 
+    inputEmployeesValue :
+    inputShiftsValue
+  )
+
+  useEffect(()=>{
+    setPageValue(
+      currentPage === "Employees" ? 
+      inputEmployeesValue :
+      inputShiftsValue
+    )
+  }, [currentPage])
 
   if(pageValue === null) return
 
@@ -48,14 +75,22 @@ const AddElement = ({viewState, setViewState}: Props) => {
               `}
             type={
               key === "email" ? "email" :
-              key === "hourly_rate" ? "number" 
+              key === "hourly_rate" ? "number" :
+              key === "duration" ? "number" :
+              key === "start_time" ? "time" :
+              key === "end_time" ? "time" 
               : "text"
             } 
             value={pageValue[key]}
             name={key}
             onChange={ e =>{
+
               const value = e.currentTarget.value
-              setPageValue(prev => ({...prev, [key]: value}))
+              setPageValue(prev => (
+                prev ? 
+                {...prev, [key]: value} :
+                null
+              ))
             }}
             required
             />
@@ -72,14 +107,45 @@ const AddElement = ({viewState, setViewState}: Props) => {
   }
 
   function handleSubmit(e: FormEvent<HTMLFormElement>){
-    e.preventDefault()
-    const formData = new FormData(e.currentTarget)
-    
-    const values = Object.fromEntries(formData.entries())
-    
-    const message = currentPage === "Employees" ? `${values.first_name} ${values.last_name} ${values.middle_name}\n ${values.phone}\n ${values.email}` : ""
+    e.preventDefault()    
+    let message =  ""
+    if (pageValue === null) return 
+
+    if ("first_name" in pageValue){
+      
+      message = `${String(pageValue.first_name)} ${String(pageValue.last_name)} ${String(pageValue.middle_name)}\n ${String(pageValue.phone)}\n ${String(pageValue.email)} \n ${String(pageValue.hourly_rate)}`
+    } else{
+
+      message = `Location: ${String(pageValue.location)} \n 
+      Duration: ${String(pageValue.duration)} \n
+      Start Time: ${String(pageValue.start_time)} \n
+      End Time: ${String(pageValue.end_time)} \n
+      `
+
+    }
+
 
     setConfirmation(true, message)
+
+    if(currentPage === "Employees"){
+      setConfirmationObject({
+        ...pageValue,
+        id: generateCustomID("EMP"),
+        role: "staff",
+        status: "inactive",
+      })
+    } else{
+
+      const timeStamp = new Date().toISOString()
+
+      setConfirmationObject({
+        ...pageValue,
+        id: generateCustomID("SHF"),
+        created_at: timeStamp,
+        currently_assigned_to: []
+      })
+    }
+
 
   }
 
@@ -112,7 +178,14 @@ const AddElement = ({viewState, setViewState}: Props) => {
               text-[11px] py-1.5 px-3 bg-primary rounded text-secondary shadow cursor-pointer active:scale-90 select-none transition-set flex items-center gap-1
               
             `}
-            onClick={()=>{setViewState(false)}}
+            onClick={()=>{
+              setViewState(false)
+              setPageValue(
+                currentPage === "Employees" ? 
+                inputEmployeesValue :
+                inputShiftsValue
+              )
+            }}
             type="button"
             >
               <MdClose/>

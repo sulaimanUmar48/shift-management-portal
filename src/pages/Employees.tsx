@@ -1,27 +1,40 @@
 import { useEffect, useState } from "react"
 import { usePageStore } from "../store/page-store"
 import StatsCard from "../components/cards/StatsCard"
-import { MdAddCircle, MdAssignmentInd, MdBeachAccess, MdDelete, MdEdit, MdGroupOff, MdGroups } from "react-icons/md"
+import { MdAddCircle, MdAssignmentInd, MdBeachAccess, MdEdit, MdGroupOff, MdGroups } from "react-icons/md"
 import Table from "../components/table/Table"
 import type { Employee } from "../types/entites-types"
-import dat from "../assets/dummy-data/employees.json"
 import { createColumnHelper } from "@tanstack/react-table"
 import SearchInput from "../components/search-input/SearchInput"
 import AddElement from "../components/add-entity/AddElement"
 import AddButton from "../components/add-entity/AddButton"
 import ConfirmationModal from "../components/modals/ConfirmationModal"
+import { useEmployeesStore } from "../store/employees-store"
+import EditEmployeeDetailsDrawer from "../components/drawers/EditEmployeeDetailsDrawer"
 
 
 const Employees = () => {
 
     // Store Values
     const {setCurrentPage} = usePageStore()
+    const {employees, employeesListener, setSelectedEmployee} = useEmployeesStore()
 
 
-    const [data] = useState<Employee[]>(dat as Employee[])
+    // const [data] = useState<Employee[]>(dat as Employee[])
     const [searchInput, setSearchInput] = useState("")
     const [currentFilter, setCurrentFilter] = useState<"all" | "active" | "on_leave" | "inactive">("all")
     const [addElementViewState, setAddElementViewState] = useState<boolean>(false)
+    const [editEmployeeInfoDrawerState, setEditEmployeeInforDrawerState] = useState(false )
+
+    useEffect(()=>{
+      const unSubList = employeesListener()
+
+      return unSubList
+    },[])
+
+    useEffect(()=>{
+      console.log(employees)
+    }, [employees])
 
     useEffect(()=>{console.log(addElementViewState)},[addElementViewState])
 
@@ -34,38 +47,6 @@ const Employees = () => {
 
     const columnHelper = createColumnHelper<Employee>()
 
-    const assignShiftColumnDef = [
-      columnHelper.display({
-        header: "Assign Shift",
-        id: "assign_shift",
-        cell: ( ) => 
-        <div
-        className={`
-          space-x-1 
-          [&>button]:cursor-pointer [&>button]:active:scale-90
-
-        `}
-        >
-          <button
-          className={`text-accent-one`}
-          >
-            <MdAddCircle/>
-          </button>
-
-          <button
-          className={``}
-          >
-            <MdEdit/>
-          </button>
-          
-          <button
-          className={`text-rose-400`}
-          >
-            <MdDelete/>
-          </button>
-        </div>
-      })
-    ]
 
     const columnDef = [
       columnHelper.display({
@@ -117,14 +98,53 @@ const Employees = () => {
           {getValue()}
         </span>
       }),
-      ...currentFilter === "inactive" ? assignShiftColumnDef :
-      []
+
+      columnHelper.display({
+        header: "Action",
+        id: "assign_shift",
+        cell: ({row}) => 
+        <div
+        className={`
+          space-x-1 
+          [&>button]:cursor-pointer [&>button]:active:scale-90
+
+        `}
+
+        onClick={ e => e.stopPropagation() }
+        >
+          {
+            currentFilter === "inactive" &&
+            <button
+            className={`text-accent-one`}
+            >
+              <MdAddCircle/>
+            </button>
+          }
+
+          <button
+          className={``}
+          onClick={()=>{
+            setEditEmployeeInforDrawerState(true)
+            setSelectedEmployee(row.original)
+          }}
+          >
+            <MdEdit/>
+          </button>
+          
+        </div>
+      })
     ]
+
+    const filteredData = employees.filter( employee => {
+      if (currentFilter === "all") return true
+      return  employee.status === currentFilter
+    })
+    console.log(filteredData)
 
   return (
     <div
     className={`
-      h-full max-h-full p-4 flex flex-col gap-4 overflow-y-scroll pb-4 relative 
+      h-full max-h-full p-4 flex flex-col gap-4 overflow-y-scroll pb-4 relative
     `}
     >
       <div 
@@ -133,10 +153,10 @@ const Employees = () => {
       `}
       >
 
-        <StatsCard title={"Total Employees"} count={data.length} Icon={MdGroups} />
-        <StatsCard title={"Active Employees"} count={data.filter(x => x.status === "active").length} Icon={MdAssignmentInd} />
-        <StatsCard title={"Inactive Employees"} count={data.filter(x => x.status === "inactive").length} Icon={MdGroupOff } />
-        <StatsCard title={"Employees On Leave"} count={data.filter(x => x.status === "on_leave").length} Icon={MdBeachAccess} />
+        <StatsCard title={"Total Employees"} count={employees.length} Icon={MdGroups} />
+        <StatsCard title={"Active Employees"} count={employees.filter(x => x.status === "active").length} Icon={MdAssignmentInd} />
+        <StatsCard title={"Inactive Employees"} count={employees.filter(x => x.status === "inactive").length} Icon={MdGroupOff } />
+        <StatsCard title={"Employees On Leave"} count={employees.filter(x => x.status === "on_leave").length} Icon={MdBeachAccess} />
         
       </div>
       <div className={`h-fit bg-primary-comp-two rounded-lg shadow`}>
@@ -149,7 +169,7 @@ const Employees = () => {
             max-sm:gap-4  
           `}>
             {/* SEARCH INPUT FOR TABLE */}
-            <SearchInput value={searchInput} setValue={setSearchInput} placeHolder={"Search employer name"}/>
+            <SearchInput value={searchInput} setValue={setSearchInput} placeHolder={"Search employee name..."}/>
 
 
             <div className={`flex w-fit gap-1`}
@@ -173,12 +193,13 @@ const Employees = () => {
         <div
         className={`h-123 rounded`}
         >
-          <Table<Employee> Data={data} columnDef={columnDef} inputColumnFilterID={"name"} inputColumnFilterValue={searchInput} allowCheckBox={false} />
+          <Table<Employee> Data={filteredData} columnDef={columnDef} inputColumnFilterID={"name"} inputColumnFilterValue={searchInput} allowCheckBox={false} />
         </div>
       </div>
 
       <AddElement viewState={addElementViewState} setViewState={setAddElementViewState} />
       <ConfirmationModal/>
+      <EditEmployeeDetailsDrawer viewState={editEmployeeInfoDrawerState} setViewState={setEditEmployeeInforDrawerState}/>
     </div>
   )
 }

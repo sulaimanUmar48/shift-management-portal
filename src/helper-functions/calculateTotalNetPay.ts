@@ -22,7 +22,7 @@ export const calculateTotalNetPay = (data: ShiftRecord[], employeeID:string, sta
         const startTotal = startHour * 60 + startMin;
         const endTotal = endHour * 60 + endMin
 
-        let timeDifference = (endTotal - startTotal) / 60 
+        const timeDifference = (endTotal - startTotal) / 60 
         totalHours += timeDifference
     } 
 
@@ -68,7 +68,7 @@ export const calculateTotalNetPay = (data: ShiftRecord[], employeeID:string, sta
 
     // Calculate net Pay 
 
-    let netPay = grossPay - tardinessDeduction
+    const netPay = grossPay - tardinessDeduction
 
     return {totalHours, grossPay, overtime, tardinessDeduction, netPay}
     

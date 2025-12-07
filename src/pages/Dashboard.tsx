@@ -5,22 +5,27 @@ import { MdAccessTimeFilled, MdGroups, MdInsights, MdNotifications, MdSchedule }
 import Notification from "../components/notification/Notification"
 import DoughnutChart from "../components/charts/DoughnutChart"
 import LineChart from "../components/charts/LineChart"
+import { useEmployeesStore } from "../store/employees-store"
 
 
 const Dashboard = () => {
 
     // Store Values
     const {setCurrentPage} = usePageStore()
+    const {employees, employeesListener} = useEmployeesStore()
 
     // functions to run at and only at initial render
     useEffect(()=>{
         setCurrentPage("Dashboard")
+        const unSubList = employeesListener()
+
+        return unSubList 
     },[])
 
   return (
     <div
     className={`
-      h-full max-h-full p-4 flex flex-col gap-4 overflow-y-scroll pb-4
+      h-full max-h-full p-4 flex flex-col gap-4 overflow-y-scroll pb-4 
     `}
     >
         {/* TOP CARDS FOR GENERAL STATISTICS */}
@@ -30,7 +35,7 @@ const Dashboard = () => {
       `}
       >
 
-        <StatsCard title={"Total Employees"} count={5} Icon={MdGroups} />
+        <StatsCard title={"Total Employees"} count={employees.length} Icon={MdGroups} />
         <StatsCard title={"Shifts Assigned(Week)"} count={10} Icon={MdSchedule} />
         <StatsCard title={"Average Attendance"} count={15} Icon={MdInsights} />
         <StatsCard title={"Total Hours Worked"} count={20} Icon={MdAccessTimeFilled} />

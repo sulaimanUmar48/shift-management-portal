@@ -1,7 +1,8 @@
-import {Chart as ChartJS, ArcElement, Tooltip, Legend} from "chart.js"
+import {Chart as ChartJS, ArcElement, Tooltip, Legend, Filler} from "chart.js"
 import { Doughnut } from "react-chartjs-2"
+import type { ChartOptions } from "chart.js"
 
-ChartJS.register(ArcElement, Tooltip, Legend)
+ChartJS.register(ArcElement, Tooltip, Legend, Filler)
 
 const DoughnutChart = () => {
 const data = {
@@ -15,7 +16,7 @@ const data = {
     ],
   };
 
-  const options: any = {
+  const options: ChartOptions<"doughnut"> = {
     cutout: "70%", 
     plugins: {
       legend: { display: false },

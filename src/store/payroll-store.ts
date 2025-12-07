@@ -5,7 +5,7 @@ import type { PayrollRecord } from "../types/entites-types";
 type PayrollStore = {
     currentPayRoll: PayrollRecord | null
     setCurrentPayroll: (value: PayrollRecord) => void 
-    editCurrentPayroll: <K extends keyof PayrollRecord>(key: K, value: PayrollRecord[K]) =>     void
+    editCurrentPayroll: <K extends keyof PayrollRecord>(key: K, value: PayrollRecord[K]) => void
 }
 
 
