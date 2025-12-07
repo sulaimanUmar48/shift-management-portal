@@ -32,11 +32,11 @@ export const calculateTotalNetPay = (data: ShiftRecord[], employeeID:string, sta
 
     let grossPay = 0
     
-    for(let i = 0; i < employeeIDFilteredData.length; i++){
-        const grossPayDaily = employeeIDFilteredData[i].duration * hourlyRate
+    // for(let i = 0; i < employeeIDFilteredData.length; i++){
+    //     const grossPayDaily = employeeIDFilteredData[i].duration * hourlyRate
 
-        grossPay += grossPayDaily
-    }
+    //     grossPay += grossPayDaily
+    // }
 
     console.log(grossPay)
 
