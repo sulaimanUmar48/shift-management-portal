@@ -38,7 +38,7 @@ const Record = () => {
             }
         }
 
-        const filteredData = dateRangeFilter(startDate, endDate, dat)
+        // const filteredData = dateRangeFilter(startDate, endDate, dat)
         setData([]) // !!!!!!!!!!!!!
     }, [startDate, endDate])
 

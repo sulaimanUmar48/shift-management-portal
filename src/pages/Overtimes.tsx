@@ -6,7 +6,6 @@ import SearchInput from "../components/search-input/SearchInput"
 import Table from "../components/table/Table"
 import type { Overtime } from "../types/entites-types"
 import { createColumnHelper } from "@tanstack/react-table"
-import dat from "../assets/dummy-data/Overtime.json"
 
 
 const Overtimes = () => {
